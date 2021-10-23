@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="HitarthPattani_LinkGuestOrders">
+        <sequence>
+            <module name="Magento_Sales" />
+        </sequence>
+    </module>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="HitarthPattani_LinkGuestOrders::link_guest_orders_on_register" instance="HitarthPattani\LinkGuestOrders\Observer\LinkGuestOrdersOnRegisterObserver" />
+    </event>
+</config>

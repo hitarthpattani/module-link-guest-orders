@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customer" translate="label">
+            <group id="link_guest_orders" translate="label" showInDefault="1" showInWebsite="0" showInStore="0" sortOrder="120">
+                <label>Link Guest Orders</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Link Guest Orders Functionality</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable module will add link to customer account navigation to link guest orders.</comment>
+                </field>
+                <field id="link_guest_orders_on_customer_registation" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Link Guest Orders on Customer Registration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Link guest orders immediately after customer registation process.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="linkguestorders" frontName="linkguestorders">
+            <module name="HitarthPattani_LinkGuestOrders" />
+        </route>
+    </router>
+</config>

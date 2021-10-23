@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <link_guest_orders>
+                <enabled>1</enabled>
+                <link_guest_orders_on_customer_registation>1</link_guest_orders_on_customer_registation>
+            </link_guest_orders>
+        </customer>
+    </default>
+</config>

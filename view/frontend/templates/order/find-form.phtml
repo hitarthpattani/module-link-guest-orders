@@ -1,0 +1,48 @@
+<?php
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+/** @var $block \Magento\Framework\View\Element\Template */
+
+$viewModel = $block->getData('viewModel');
+?>
+<form class="form form-claim-guest-order"
+      id="claim-guest-order-form"
+      data-mage-init='{"validation":{}}'
+      action="<?= $block->escapeUrl($viewModel->getFormViewAction()) ?>"
+      method="post">
+    <fieldset class="fieldset">
+        <div class="field number required">
+            <label class="label" for="claim-guest-order-number">
+                <span><?= $block->escapeHtml(__('Order Number')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text" class="input-text"
+                       id="claim-guest-order-number" name="guest_order_number"
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div id="order-email" class="field email required">
+            <label class="label" for="claim-guest-order-email">
+                <span><?= $block->escapeHtml(__('Email')) ?></span>
+            </label>
+            <div class="control">
+                <input type="email" class="input-text"
+                       id="claim-guest-order-email" name="guest_order_email"
+                       readonly="true"
+                       value="<?= $block->escapeHtmlAttr($viewModel->getCustomerEmail()) ?>"
+                       data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Find')) ?>"
+                    class="action submit primary">
+                <span><?= $block->escapeHtml(__('Find')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>

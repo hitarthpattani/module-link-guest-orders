@@ -1,0 +1,27 @@
+{
+    "name": "hitarthpattani/module-link-guest-orders",
+    "description": "A Magento 2 extension developed which provide option to assign guest orders automatically or manually based on configuration to the existing customer account with the same email address used at the time of placing order.",
+    "type": "magento2-module",
+    "require": {
+        "php": "^7.0.0||^7.1.0||^7.2.0||^7.3.0||^7.4.0",
+        "magento/module-sales": "^100.1.1||^101.0||^102.0||^103.0",
+        "magento/framework": "^100.1.1||^101.0||^102.0||^103.0"
+    },
+    "license": [
+        "BSD-3-Clause"
+    ],
+    "authors": [
+        {
+            "name": "Hitarth Pattani",
+            "role": "Author"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "HitarthPattani\\LinkGuestOrders\\": ""
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<?php
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate
+
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $escaper \Magento\Framework\Escaper */
+
+$viewModel = $block->getData('viewModel');
+?>
+
+<form class="form form-claim-guest-order"
+      id="claim-guest-order-form"
+      data-mage-init='{"validation":{}}'
+      action="<?= $block->escapeUrl($viewModel->getFormViewPostAction()) ?>"
+      method="post">
+  <input type="hidden" name="guest_order_number"
+    value="<?= $block->escapeUrl($viewModel->getOrderIncrementId()) ?>" />
+  <input type="hidden" name="guest_order_email"
+    value="<?= $block->escapeUrl($viewModel->getCustomerEmail()) ?>" />
+  <div class="claim-order-actions">
+      <button type="submit" title="<?= $block->escapeHtmlAttr(__('Link Order')) ?>"
+              class="action submit">
+          <span><?= $block->escapeHtml(__('Link Order')) ?></span>
+      </button>
+      <a class="action back"
+         href="<?= $block->escapeUrl($block->getUrl('linkguestorders/order/find')) ?>">
+          <span><?= $block->escapeHtml(__('<< Back')) ?></span>
+      </a>
+  </div>
+</form>

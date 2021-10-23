@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_account_navigation">
+            <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-link-guest-orders" ifconfig="customer/link_guest_orders/enabled">
+                <arguments>
+                    <argument name="path" xsi:type="string">linkguestorders/order/find</argument>
+                    <argument name="label" xsi:type="string">Link Guest Orders</argument>
+                    <argument name="sortOrder" xsi:type="number">10</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

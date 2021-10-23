@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     HitarthPattani\LinkGuestOrders
+ * @author      Hitarth Pattani <hitarthpattani@gmail.com>
+ * @copyright   Copyright © 2021. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Link Guest Orders</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block name="customer.order.link.guest.order.find.form" template="HitarthPattani_LinkGuestOrders::order/find-form.phtml" cacheable="false">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">HitarthPattani\LinkGuestOrders\ViewModel\Data</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
