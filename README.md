@@ -10,5 +10,3 @@ composer require hitarthpattani/module-link-guest-orders:dev-master
 bin/magento setup:upgrade
 ```
 
-## Usage 
-
